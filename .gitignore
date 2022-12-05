@@ -2,3 +2,4 @@ VimbaPython
 opencv
 calibration_images
 .idea
+__pycache__

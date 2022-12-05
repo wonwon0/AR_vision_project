@@ -1,3 +1,10 @@
 https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html
 https://docs.opencv.org/3.4/da/d0d/tutorial_camera_calibration_pattern.html
 https://learnopencv.com/camera-calibration-using-opencv/
+https://www.mdpi.com/1424-8220/20/17/4825
+https://www.researchgate.net/profile/Hadi-Fekrmandi/publication/334289233_Vision-based_Guidance_and_Navigation_for_Swarm_of_Small_Satellites_in_a_Formation_Flying_Mission/links/5d22bda6299bf1547ca1b541/Vision-based-Guidance-and-Navigation-for-Swarm-of-Small-Satellites-in-a-Formation-Flying-Mission.pdf
+https://openaccess.thecvf.com/content_CVPR_2019/papers/Hu_Deep_ChArUco_Dark_ChArUco_Marker_Pose_Estimation_CVPR_2019_paper.pdf
+https://opencv24-python-tutorials.readthedocs.io/_/downloads/en/stable/pdf/
+https://docs.opencv.org/4.x/d5/de5/tutorial_py_setup_in_windows.html
+https://answers.opencv.org/question/99506/how-to-install-opencv-with-vtk-for-viz/
+https://subscription.packtpub.com/book/data/9781786469717/1/ch01lvl1sec9/installing-the-opencv-library
