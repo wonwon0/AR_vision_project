@@ -8,3 +8,6 @@ https://opencv24-python-tutorials.readthedocs.io/_/downloads/en/stable/pdf/
 https://docs.opencv.org/4.x/d5/de5/tutorial_py_setup_in_windows.html
 https://answers.opencv.org/question/99506/how-to-install-opencv-with-vtk-for-viz/
 https://subscription.packtpub.com/book/data/9781786469717/1/ch01lvl1sec9/installing-the-opencv-library
+
+https://stackoverflow.com/questions/41484721/how-to-transform-a-3d-model-for-augmented-reality-application-using-opencv-viz-a
+https://stackoverflow.com/questions/71686497/anchoring-rendered-3d-model-to-charucoboard-with-opencv-to-opengl-pose-estimatio
