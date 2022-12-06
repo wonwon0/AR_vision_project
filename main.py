@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 from calibration_routine import calibrate_camera
 from cv2 import aruco
+import open3d as o3d
 
 # termination criteria
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
@@ -15,7 +16,6 @@ imgpoints = [] # 2d points in image plane.
 mtx = np.loadtxt('mtx.txt', dtype=float)
 dist = np.loadtxt('dist.txt', dtype=float)
 
-
 aruco_dict = aruco.Dictionary_get(aruco.DICT_5X5_250)
 board = aruco.CharucoBoard_create(7, 5, 0.03, 0.015, aruco_dict)
 imboard = board.draw((1000, 1000))
@@ -26,12 +26,22 @@ arucoParams = aruco.DetectorParameters_create()
 last_img = None
 rvec=np.array([])
 tvec=np.array([])
+pcd = o3d.io.read_point_cloud('./3d_objects/stanford_bunny.ply')
+cord_change_mat = np.array([[1., 0., 0.], [0, 1., 0.], [0., 0., -1.]], dtype=np.float32)
+pcd.rotate(cord_change_mat)
+pcd.scale(2, center=pcd.get_center())
+pcd.translate(-pcd.get_center())
+pcd.translate([0,0,-0.05])
+pts3D = np.asarray(pcd.points)
+# pts3D = pts3D.dot(cord_change_mat.T)
+
 with vimba.Vimba.get_instance() as vmb:
     cams = vmb.get_all_cameras()
     with cams[0] as cam:
         # Adjust to the Bayer format you want to use
         cam.set_pixel_format(vimba.PixelFormat.BayerRG8)
         cv2.namedWindow("output", cv2.WINDOW_NORMAL)  # Create window with freedom of dimensions
+        cv2.namedWindow("output_uncal", cv2.WINDOW_NORMAL)  # Create window with freedom of dimensions
         while 1:
             # Record single frame for this example
             frame = cam.get_frame()
@@ -55,10 +65,16 @@ with vimba.Vimba.get_instance() as vmb:
                     retval, rvec, tvec = aruco.estimatePoseCharucoBoard(charucoCorners, charucoIds, board, mtx, dist, rvec, tvec)  # posture estimation from a charuco board
                     if retval == True:
                         dst = cv2.drawFrameAxes(dst, mtx, dist, rvec, tvec, 0.1)  # axis length 100 can be changed according to your requirement
-                        print(tvec)
+                        img_points, _ = cv2.projectPoints(pts3D, rvec, tvec, mtx, dist)
+                        for point in img_points:
+                            p1, p2 = int(point[0][0]), int(point[0][1])
+                            if p2 >= dst.shape[0] or p1 >= dst.shape[1] or p1<0 or p2<0:
+                                continue
+                            else:
+                                dst[p2, p1] = (255, 255, 255)
 
                 cv2.imshow("output", dst)
-                # cv2.imshow("output_uncal", img)
+                # cv2.imshow("output_uncal", img_points)
                 cv2.waitKey(100)
 
 
