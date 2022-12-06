@@ -5,9 +5,17 @@ https://www.mdpi.com/1424-8220/20/17/4825
 https://www.researchgate.net/profile/Hadi-Fekrmandi/publication/334289233_Vision-based_Guidance_and_Navigation_for_Swarm_of_Small_Satellites_in_a_Formation_Flying_Mission/links/5d22bda6299bf1547ca1b541/Vision-based-Guidance-and-Navigation-for-Swarm-of-Small-Satellites-in-a-Formation-Flying-Mission.pdf
 https://openaccess.thecvf.com/content_CVPR_2019/papers/Hu_Deep_ChArUco_Dark_ChArUco_Marker_Pose_Estimation_CVPR_2019_paper.pdf
 https://opencv24-python-tutorials.readthedocs.io/_/downloads/en/stable/pdf/
+
+install opencv from source
 https://docs.opencv.org/4.x/d5/de5/tutorial_py_setup_in_windows.html
 https://answers.opencv.org/question/99506/how-to-install-opencv-with-vtk-for-viz/
 https://subscription.packtpub.com/book/data/9781786469717/1/ch01lvl1sec9/installing-the-opencv-library
+https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html
 
 https://stackoverflow.com/questions/41484721/how-to-transform-a-3d-model-for-augmented-reality-application-using-opencv-viz-a
 https://stackoverflow.com/questions/71686497/anchoring-rendered-3d-model-to-charucoboard-with-opencv-to-opengl-pose-estimatio
+
+https://stackoverflow.com/questions/67179977/unable-to-render-a-specific-view-of-a-object-in-open3d/67613280#67613280
+https://stackoverflow.com/questions/70273002/project-3d-mesh-on-2d-image-using-camera-intrinsic-matrix
+https://github.com/isl-org/Open3D/issues/4737
+https://stackoverflow.com/questions/69696354/capture-depth-image-without-opening-visualizer-in-open3d
