@@ -19,3 +19,7 @@ https://stackoverflow.com/questions/67179977/unable-to-render-a-specific-view-of
 https://stackoverflow.com/questions/70273002/project-3d-mesh-on-2d-image-using-camera-intrinsic-matrix
 https://github.com/isl-org/Open3D/issues/4737
 https://stackoverflow.com/questions/69696354/capture-depth-image-without-opening-visualizer-in-open3d
+
+https://pypi.org/project/multical/
+
+https://github.com/lzqsd/VirtualObjectInsertion
